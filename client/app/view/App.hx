@@ -7,7 +7,7 @@ class App extends doom.Component<AppApi, State> {
   override function render() {
     return div(["id" => "root"], [
       new Header({}, {}),
-      // new Main(state, state),
+      new Main(api, state),
       // new Footer({}, {})
     ]);
   }
