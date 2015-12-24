@@ -1,0 +1,17 @@
+-cp client
+-lib npm
+-lib doom
+-lib dots
+-lib lies
+-lib thx.promise
+-main app.Main
+-js public/js/client.js
+
+--next
+
+-cp staticserver
+-lib abe
+-lib express
+-lib hxnodejs
+-main Main
+-js bin/staticserver.js
