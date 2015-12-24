@@ -1,0 +1,11 @@
+{
+  "name": "vacay-planner",
+  "version": "1.0.0",
+  "description": "Plan a vacation to a few select destinations",
+  "main": "bin/staticserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Martin-Smucker",
+  "license": "MIT"
+}
