@@ -1,14 +1,16 @@
 package app.state;
 
 typedef DestinationInfo = {
-  name : String,
+  name : {
+    short : String,
+    full : String
+  },
   image : ImageInfo,
   weather : Array<WeatherData> // 52 values with weekly averages
 };
 
 typedef ImageInfo = {
   filename : String,
-  format : ImageFormat,
   alt : String,
   attribution : String
 };
@@ -18,11 +20,6 @@ typedef WeatherData = {
   avgLow : Int,
   conditions : WeatherConditions
 };
-
-enum ImageFormat {
-  Png;
-  Jpg;
-}
 
 enum WeatherConditions {
   Sun;

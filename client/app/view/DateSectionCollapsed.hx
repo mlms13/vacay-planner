@@ -6,7 +6,7 @@ using thx.format.DateFormat;
 
 class DateSectionCollapsed extends doom.Component<{}, DateRange> {
   override function render() {
-    return div(["class" => "card clearfix"], [
+    return div(["class" => "card card-padded clearfix"], [
       div(["class" => "half"], [
         strong(["class" => "block text-light"], "Start"),
         span(["class" => "text-dark"], state.start.format("MMM d 'yy"))

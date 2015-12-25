@@ -25,6 +25,10 @@ var gulp = require('gulp'),
         all: ['./client/styl/**/*.styl'],
         dest: './public/css'
       },
+      images: {
+        all: ['./client/img/**/*.png', './client/img/**/*.jpg'],
+        dest: './public/img'
+      },
       haxe: {
         all: ['./client/app/**/*.hx', './staticserver/**/*.hx']
       }
@@ -35,6 +39,12 @@ gulp.task('copy:html', function () {
     .pipe(gulp.dest(paths.html.dest))
     .pipe(lr());
 });
+
+gulp.task('copy:images', function () {
+  return gulp.src(paths.images.all)
+    .pipe(gulp.dest(paths.images.dest))
+    .pipe(lr());
+})
 
 gulp.task('haxe', function (cb) {
   exec('haxe build.hxml', function (err) {
@@ -57,7 +67,7 @@ gulp.task('stylus', function () {
     .pipe(lr());
 });
 
-gulp.task('build', ['copy:html', 'js', 'stylus']);
+gulp.task('build', ['copy:html', 'copy:images', 'js', 'stylus']);
 
 gulp.task('watch', ['build'], function () {
   lr.listen();
